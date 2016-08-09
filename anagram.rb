@@ -7,7 +7,7 @@ class Anagram
 
   def generate_anagrams(string)
     permutations = find_permutations(string)
-    puts permutations.find_all {|word| dictionary.include?(word)}
+    permutations.find_all {|word| dictionary.include?(word)}
   end
 
   private
@@ -22,4 +22,4 @@ class Anagram
 end
 
 anagram = Anagram.new
-anagram.generate_anagrams("cinema")
+puts anagram.generate_anagrams("cinema")
